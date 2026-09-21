@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NF Collection — Women's Fashion Boutique · Tiranë</title>
+  <meta name="description" content="NF Collection — boutique modeje për femra. Fustane, sete dhe stil. Tiranë, rruga e Durrësit. Transport në gjithë Shqipërinë.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta property="og:title" content="NF Collection — Women's Fashion Boutique">
+  <meta property="og:description" content="Boutique modeje për femra në Tiranë. Transport në gjithë Shqipërinë. Mundësi ndërrimi.">
+  <meta property="og:image" content="images/product-burgundy-gown.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="NF Collection">
+        <img src="images/logo.png" alt="NF Collection" class="brand-logo" width="44" height="44">
+        <span class="brand-text">NF Collection</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#collection" data-i18n="nav.collection">Koleksioni</a>
+        <a href="#story" data-i18n="nav.story">Rreth nesh</a>
+        <a href="#visit" data-i18n="nav.visit">Vizito</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="sq" aria-pressed="true">SQ</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="icon-btn" href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <button type="button" class="cart-btn" id="cartBtn" aria-label="Bag" data-i18n-aria="cart.aria">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#collection" data-i18n="nav.collection">Koleksioni</a>
+      <a href="#story" data-i18n="nav.story">Rreth nesh</a>
+      <a href="#visit" data-i18n="nav.visit">Vizito</a>
+      <a href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-slides">
+          <div class="hero-slide is-active" style="background-image:url('images/product-burgundy-gown.png')"></div>
+          <div class="hero-slide" style="background-image:url('images/product-black-gown.png')"></div>
+          <div class="hero-slide" style="background-image:url('images/product-lace-mini-front.png')"></div>
+          <div class="hero-slide" style="background-image:url('images/product-lace-mini-side.png')"></div>
+        </div>
+        <div class="hero-veil"></div>
+      </div>
+      <div class="hero-content">
+        <img src="images/logo.png" alt="NF Collection" class="hero-logo" width="160" height="160">
+        <p class="hero-tagline" data-i18n="hero.tagline">Stil që të ndjek</p>
+        <p class="hero-sub" data-i18n="hero.sub">Boutique modeje për femra · Tiranë</p>
+        <div class="hero-cta">
+          <a href="#collection" class="btn btn-primary" data-i18n="hero.ctaShop">Shiko koleksionin</a>
+          <a href="https://www.instagram.com/nf_collection98_/" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="hero.ctaIg">Ndiq në Instagram</a>
+        </div>
+      </div>
+      <a href="#collection" class="hero-scroll" aria-label="Scroll">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label" data-i18n="collection.label">Koleksioni</p>
+          <h2 class="section-title" data-i18n="collection.title">Pjesë të zgjedhura</h2>
+          <p class="section-desc" data-i18n="collection.desc">Fustane elegante, sete dhe stil për çdo moment — porosit online ose vizito dyqanin.</p>
+        </header>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="editorial" aria-label="Campaign">
+      <div class="editorial-media">
+        <img src="images/product-black-gown.png" alt="" loading="lazy">
+      </div>
+      <div class="editorial-copy">
+        <p class="section-label" data-i18n="editorial.label">Editorial</p>
+        <h2 class="section-title" data-i18n="editorial.title">Natë. Dritë.<br>Prani.</h2>
+        <p data-i18n="editorial.body">Silueta që bie në sy — për dasma, darka dhe çdo mbrëmje që meriton më shumë.</p>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <p class="section-label" data-i18n="story.label">Rreth nesh</p>
+          <h2 class="section-title">NF Collection</h2>
+          <p data-i18n="story.body">Boutique modeje për femra në Tiranë. Trende të reja, cilësi dhe shërbim i ngrohtë — në dyqan ose me porosi online.</p>
+          <ul class="story-points">
+            <li data-i18n="story.p1">Transport në gjithë Shqipërinë</li>
+            <li data-i18n="story.p2">Mundësi ndërrimi</li>
+            <li data-i18n="story.p3">Tiranë, rruga e Durrësit</li>
+            <li data-i18n="story.p4">Porosi përmes Instagram DM</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <img src="images/product-lace-mini-front.png" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="container visit-inner">
+        <p class="section-label" data-i18n="visit.label">Vizito & porosite</p>
+        <h2 class="section-title" data-i18n="visit.title">Na gjeni në Tiranë</h2>
+        <p class="section-desc" data-i18n="visit.desc">Provo në dyqan, ose na shkruaj për madhësinë dhe porosinë tënde.</p>
+        <div class="visit-places">
+          <div class="visit-place">
+            <h3 data-i18n="visit.store">Dyqani</h3>
+            <p data-i18n="visit.address">Rruga e Durrësit, Tiranë</p>
+            <a class="visit-link" href="https://maps.app.goo.gl/Ncw7YDbGqwXWQL3z7" target="_blank" rel="noopener" data-i18n="visit.map">Hap në hartë</a>
+          </div>
+          <div class="visit-place">
+            <h3 data-i18n="visit.contact">Kontakt</h3>
+            <p><a href="tel:+355689050129">068 905 0129</a></p>
+            <p class="visit-meta">NIPT · M31704001U</p>
+          </div>
+        </div>
+        <div class="visit-cta">
+          <a class="btn btn-primary" href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener" data-i18n="visit.ig">
+            Mesazh @nf_collection98_
+          </a>
+          <a class="btn btn-ghost-dark" href="tel:+355689050129" data-i18n="visit.call">Telefono</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="images/logo.png" alt="" class="footer-logo" width="72" height="72">
+      <p>© <span id="year"></span> NF Collection · <span data-i18n="footer.tag">Women's Fashion Boutique</span></p>
+      <a href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener">@nf_collection98_</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="productModal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+      <div class="modal-media">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+        <p id="modalPrice" class="modal-price"></p>
+        <div class="size-row" id="sizeRow"></div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-primary" id="addToCartBtn" data-i18n="modal.add">Shto në çantë</button>
+          <a class="btn btn-ghost-dark" id="igOrderBtn" href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener" data-i18n="modal.ig">Porosit në Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-drawer" id="cartDrawer" hidden>
+    <div class="cart-backdrop" data-close-cart></div>
+    <aside class="cart-panel" aria-label="Bag">
+      <div class="cart-head">
+        <h2 data-i18n="cart.title">Çanta jote</h2>
+        <button type="button" class="modal-close" data-close-cart aria-label="Close">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total">
+          <span data-i18n="cart.total">Totali</span>
+          <strong id="cartTotal">0 LEK</strong>
+        </div>
+        <a class="btn btn-primary btn-block" id="checkoutIg" href="https://www.instagram.com/nf_collection98_/" target="_blank" rel="noopener" data-i18n="cart.checkout">Porosit në Instagram</a>
+        <p class="cart-hint" data-i18n="cart.hint">Dërgo detajet e çantës në DM — madhësia dhe pagesa rregullohen privatisht.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

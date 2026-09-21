@@ -1,0 +1,14 @@
+{
+  "name": "SXTH SENSE",
+  "short_name": "SXTH SENSE",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "display": "standalone"
+}
