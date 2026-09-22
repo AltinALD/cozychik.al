@@ -1,45 +1,103 @@
-const IG_URL = "https://www.instagram.com/nf_collection98_/";
-const CART_KEY = "nf_cart_v1";
-const LANG_KEY = "nf_lang";
+const IG_URL = "https://www.instagram.com/multibrand.al/";
+const CART_KEY = "mb_cart_v1";
+const LANG_KEY = "mb_lang";
 
 const products = [
   {
     id: 1,
-    name: { sq: "Fustan mini me dantellë", en: "Lace Corset Mini Dress" },
-    color: { sq: "I zi", en: "Black" },
-    price: 3500,
-    badge: { sq: "I ri", en: "New" },
-    image: "images/product-lace-mini-front.png",
-    images: ["images/product-lace-mini-front.png", "images/product-lace-mini-side.png"],
+    brand: "Camilla",
+    name: { sq: "Trench lëkure", en: "Leather Trench Coat" },
+    color: { sq: "Kafe e errët", en: "Dark brown" },
+    price: 28900,
+    badge: { sq: "Editorial", en: "Editorial" },
+    image: "images/product-leather-trench.png",
     description: {
-      sq: "Fustan i shkurtër me mëngë të gjata dantelle, trup korseti dhe detaj në gjoks. Elegant për darkë dhe dalje.",
-      en: "Short dress with long lace sleeves, a corset bodice, and a keyhole detail. Made for nights out."
+      sq: "Trench i gjatë lëkure me bel, mëngë të gjera dhe siluetë dramatike — look editorial për ditë dhe darkë.",
+      en: "Floor-length leather trench with belt, wide sleeves, and a dramatic silhouette — editorial day-to-night."
     },
     sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 2,
-    name: { sq: "Fustan mbrëmjeje me shkëlqim", en: "Shimmer Evening Gown" },
-    color: { sq: "I zi", en: "Black" },
-    price: 4500,
-    badge: { sq: "Mbrëmje", en: "Evening" },
-    image: "images/product-black-gown.png",
+    brand: "Percival",
+    name: { sq: "Look elevator", en: "Elevator Look" },
+    color: { sq: "E bardhë / gri", en: "White / grey" },
+    price: 14500,
+    badge: { sq: "K11", en: "K11" },
+    image: "images/product-mens-look.png",
     description: {
-      sq: "Fustan i gjatë me shkëlqim, korset dantelle, rripa të hollë dhe të çarë të thellë. Për momente speciale.",
-      en: "Floor-length shimmer gown with lace bodice, spaghetti straps, and a dramatic high slit."
+      sq: "Këmishë me vijëza, pantallona të gjera dhe kapelë — stil modern meshkujsh me ndjenjë luksore.",
+      en: "Pinstripe shirt, wide-leg trousers, and cap — modern menswear with a luxury edge."
+    },
+    sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 3,
+    brand: "Percival",
+    name: { sq: "Tee Percival", en: "Percival Logo Tee" },
+    color: { sq: "E bardhë", en: "White" },
+    price: 6900,
+    badge: { sq: "Essential", en: "Essential" },
+    image: "images/product-percival-tee.png",
+    description: {
+      sq: "T-shirt e bardhë me logo Percival — bazike premium për çdo ditë.",
+      en: "Crisp white tee with Percival branding — a premium everyday essential."
+    },
+    sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 4,
+    brand: "Bardot",
+    name: { sq: "Fustan midi lëkure", en: "Leather Midi Dress" },
+    color: { sq: "I zi", en: "Black" },
+    price: 19800,
+    badge: { sq: "I ri", en: "New" },
+    image: "images/product-leather-dress.png",
+    description: {
+      sq: "Fustan midi strapless në lëkurë të zezë me detaj metalik në gjoks — siluetë e fortë dhe moderne.",
+      en: "Strapless black leather midi with a metallic chest bar — sharp, modern silhouette."
     },
     sizes: ["XS", "S", "M", "L"]
   },
   {
-    id: 3,
-    name: { sq: "Fustan vishnje me të çarë", en: "Burgundy Slit Gown" },
-    color: { sq: "Vishnje", en: "Burgundy" },
-    price: 2800,
-    badge: { sq: "I preferuar", en: "Favorite" },
-    image: "images/product-burgundy-gown.png",
+    id: 5,
+    brand: "Maria Lucia Hohan",
+    name: { sq: "Naima Dress", en: "Naima Dress" },
+    color: { sq: "Rose gold", en: "Rose gold" },
+    price: 42000,
+    badge: { sq: "Evening", en: "Evening" },
+    image: "images/product-naima-dress.png",
     description: {
-      sq: "Fustan i gjatë në ngjyrë vishnje me jakë, mëngë të gjata, draperim dhe të çarë dramatike.",
-      en: "Floor-length burgundy gown with collar cutout, long sleeves, drape detail, and a high slit."
+      sq: "Fustan mbrëmjeje me pleats metalike — Opera Night. Për dasma dhe darka që meritojnë shkëlqim.",
+      en: "Metallic pleated evening gown — Opera Night. Made for weddings and nights that sparkle."
+    },
+    sizes: ["XS", "S", "M", "L"]
+  },
+  {
+    id: 6,
+    brand: "Almada",
+    name: { sq: "Gown me sequins", en: "Sequin Halter Gown" },
+    color: { sq: "Bronz", en: "Bronze" },
+    price: 26500,
+    badge: { sq: "Sale", en: "Sale" },
+    image: "images/product-sequin-gown.png",
+    description: {
+      sq: "Fustan i gjatë saten me sequins dhe të çarë — prani maksimale për mbrëmje.",
+      en: "Satin floor-length gown with sequin detail and high slit — maximum evening presence."
+    },
+    sizes: ["XS", "S", "M", "L"]
+  },
+  {
+    id: 7,
+    brand: "Camilla",
+    name: { sq: "Trench krokodil", en: "Croc Trench Coat" },
+    color: { sq: "Mustard", en: "Mustard" },
+    price: 35500,
+    badge: { sq: "Statement", en: "Statement" },
+    image: "images/product-croc-trench.png",
+    description: {
+      sq: "Trench me teksturë krokodil dhe çantë matching — statement piece që bie në sy menjëherë.",
+      en: "Crocodile-texture trench with matching bag — a statement piece that owns the room."
     },
     sizes: ["XS", "S", "M", "L"]
   }
@@ -48,34 +106,39 @@ const products = [
 const i18n = {
   sq: {
     "nav.collection": "Koleksioni",
+    "nav.brands": "Brendet",
     "nav.story": "Rreth nesh",
-    "nav.visit": "Vizito",
-    "hero.tagline": "Stil që të ndjek",
-    "hero.sub": "Boutique modeje për femra · Tiranë",
+    "nav.visit": "Kontakt",
+    "hero.tagline": "Destinacioni i luksit të kuruar",
+    "hero.sub": "Një seleksion ekskluziv i brendeve më të mira globale.",
     "hero.ctaShop": "Shiko koleksionin",
     "hero.ctaIg": "Ndiq në Instagram",
+    "brands.label": "Brendet",
+    "brands.title": "Edit global",
+    "brands.desc": "Emra që përkufizojnë stilin — të zgjedhur me kujdes për Multibrand.",
     "collection.label": "Koleksioni",
     "collection.title": "Pjesë të zgjedhura",
-    "collection.desc": "Fustane elegante, sete dhe stil për çdo moment — porosit online ose vizito dyqanin.",
+    "collection.desc": "Looks, coats dhe evening pieces — porosit online ose na shkruaj në Instagram.",
     "editorial.label": "Editorial",
-    "editorial.title": "Natë. Dritë.<br>Prani.",
-    "editorial.body": "Silueta që bie në sy — për dasma, darka dhe çdo mbrëmje që meriton më shumë.",
+    "editorial.title": "Formë.<br>Teksturë.<br>Prani.",
+    "editorial.body": "Silueta që mbajnë hapësirën — për darka, udhëtime dhe çdo moment që meriton më shumë.",
+    "editorial.cta": "Eksploro",
     "story.label": "Rreth nesh",
-    "story.body": "Boutique modeje për femra në Tiranë. Trende të reja, cilësi dhe shërbim i ngrohtë — në dyqan ose me porosi online.",
-    "story.p1": "Transport në gjithë Shqipërinë",
-    "story.p2": "Mundësi ndërrimi",
-    "story.p3": "Tiranë, rruga e Durrësit",
+    "story.body": "Destinacioni për luks të kuruar. Një edit ekskluziv i brendeve më të mira globale — kuruar me sy të mprehtë për stil modern.",
+    "story.p1": "Brende globale të kuruara",
+    "story.p2": "Transport në Shqipëri",
+    "story.p3": "Sale deri në 50%",
     "story.p4": "Porosi përmes Instagram DM",
-    "visit.label": "Vizito & porosite",
-    "visit.title": "Na gjeni në Tiranë",
-    "visit.desc": "Provo në dyqan, ose na shkruaj për madhësinë dhe porosinë tënde.",
-    "visit.store": "Dyqani",
-    "visit.address": "Rruga e Durrësit, Tiranë",
-    "visit.map": "Hap në hartë",
+    "visit.label": "Kontakt & porosi",
+    "visit.title": "Le të flasim stil",
+    "visit.desc": "Shkruaj për madhësinë, disponueshmërinë dhe porosinë tënde — ose na ndiq për drops të reja.",
+    "visit.online": "Online",
     "visit.contact": "Kontakt",
-    "visit.ig": "Mesazh @nf_collection98_",
-    "visit.call": "Telefono",
-    "footer.tag": "Boutique modeje për femra",
+    "visit.igLink": "Hap Instagram",
+    "visit.dm": "Dërgo DM",
+    "visit.ig": "Mesazh @multibrand.al",
+    "visit.shop": "Shiko pjesët",
+    "footer.tag": "Luks i kuruar",
     "modal.add": "Shto në çantë",
     "modal.ig": "Porosit në Instagram",
     "cart.title": "Çanta jote",
@@ -87,38 +150,43 @@ const i18n = {
     "cart.aria": "Çanta",
     "toast.added": "U shtua në çantë",
     "product.view": "Shiko",
-    "marquee": ["Fustane", "Sete", "Stil", "Tiranë", "Transport në Shqipëri", "Ndërrim"]
+    "marquee": ["Silk Laundry", "Camilla", "Almada", "Percival", "Bardot", "Curated Luxury", "Up to 50% Off"]
   },
   en: {
     "nav.collection": "Collection",
+    "nav.brands": "Brands",
     "nav.story": "About",
-    "nav.visit": "Visit",
-    "hero.tagline": "Style that follows you",
-    "hero.sub": "Women's fashion boutique · Tirana",
-    "hero.ctaShop": "Shop the collection",
+    "nav.visit": "Contact",
+    "hero.tagline": "The destination for curated luxury",
+    "hero.sub": "An exclusive edit of the best global fashion brands.",
+    "hero.ctaShop": "Shop the edit",
     "hero.ctaIg": "Follow on Instagram",
+    "brands.label": "Brands",
+    "brands.title": "Global edit",
+    "brands.desc": "Names that define style — carefully selected for Multibrand.",
     "collection.label": "Collection",
     "collection.title": "Selected pieces",
-    "collection.desc": "Elegant dresses, sets, and looks for every moment — order online or visit the store.",
+    "collection.desc": "Looks, coats, and evening pieces — order online or message us on Instagram.",
     "editorial.label": "Editorial",
-    "editorial.title": "Night. Light.<br>Presence.",
-    "editorial.body": "Silhouettes that hold the room — for weddings, dinners, and evenings that deserve more.",
+    "editorial.title": "Form.<br>Texture.<br>Presence.",
+    "editorial.body": "Silhouettes that hold the room — for nights out, travel, and moments that deserve more.",
+    "editorial.cta": "Explore",
     "story.label": "About",
-    "story.body": "A women's fashion boutique in Tirana. Fresh trends, quality pieces, and warm service — in store or by order.",
-    "story.p1": "Shipping all over Albania",
-    "story.p2": "Exchange available",
-    "story.p3": "Tirana, Durrës Road",
+    "story.body": "The destination for curated luxury. An exclusive edit of the best global fashion brands — chosen with a sharp eye for modern style.",
+    "story.p1": "Curated global brands",
+    "story.p2": "Shipping across Albania",
+    "story.p3": "Sale up to 50%",
     "story.p4": "Order via Instagram DM",
-    "visit.label": "Visit & order",
-    "visit.title": "Find us in Tirana",
-    "visit.desc": "Try on in store, or message us for your size and order.",
-    "visit.store": "Boutique",
-    "visit.address": "Durrës Road, Tirana",
-    "visit.map": "Open in Maps",
+    "visit.label": "Contact & order",
+    "visit.title": "Let's talk style",
+    "visit.desc": "Message us for size, availability, and your order — or follow for new drops.",
+    "visit.online": "Online",
     "visit.contact": "Contact",
-    "visit.ig": "Message @nf_collection98_",
-    "visit.call": "Call",
-    "footer.tag": "Women's Fashion Boutique",
+    "visit.igLink": "Open Instagram",
+    "visit.dm": "Send DM",
+    "visit.ig": "Message @multibrand.al",
+    "visit.shop": "Browse pieces",
+    "footer.tag": "Curated luxury fashion",
     "modal.add": "Add to bag",
     "modal.ig": "Order on Instagram",
     "cart.title": "Your bag",
@@ -130,7 +198,7 @@ const i18n = {
     "cart.aria": "Bag",
     "toast.added": "Added to bag",
     "product.view": "View",
-    "marquee": ["Dresses", "Sets", "Style", "Tirana", "Albania shipping", "Exchange"]
+    "marquee": ["Silk Laundry", "Camilla", "Almada", "Percival", "Bardot", "Curated Luxury", "Up to 50% Off"]
   }
 };
 
@@ -140,6 +208,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 let lang = localStorage.getItem(LANG_KEY) || "sq";
 let activeProduct = null;
 let selectedSize = "M";
+let activeBrand = null;
 
 function t(key) {
   return i18n[lang][key] ?? i18n.en[key] ?? key;
@@ -208,16 +277,18 @@ function applyI18n() {
   if (track) {
     const items = t("marquee");
     const doubled = [...items, ...items];
-    track.innerHTML = doubled.map((word, i) => {
-      const sep = i < doubled.length - 1 ? "<span>·</span>" : "";
-      return `<span>${word}</span>${sep}`;
-    }).join("");
+    track.innerHTML = doubled
+      .map((word, i) => {
+        const sep = i < doubled.length - 1 ? "<span>·</span>" : "";
+        return `<span>${word}</span>${sep}`;
+      })
+      .join("");
   }
 
   document.title =
     lang === "sq"
-      ? "NF Collection — Boutique modeje për femra · Tiranë"
-      : "NF Collection — Women's Fashion Boutique · Tirana";
+      ? "Multibrand — Luks i kuruar · Shqipëri"
+      : "Multibrand — Curated Luxury Fashion · Albania";
 
   renderProducts();
   updateCartUI();
@@ -230,21 +301,28 @@ function setLang(next) {
   applyI18n();
 }
 
+function filteredProducts() {
+  if (!activeBrand) return products;
+  return products.filter((p) => p.brand === activeBrand);
+}
+
 function renderProducts() {
   const grid = $("#productGrid");
   if (!grid) return;
 
-  grid.innerHTML = products
+  const list = filteredProducts();
+
+  grid.innerHTML = list
     .map(
       (p, i) => `
-    <article class="product-card" data-id="${p.id}" style="transition-delay:${i * 70}ms">
+    <article class="product-card" data-id="${p.id}" style="transition-delay:${i * 60}ms">
       <div class="product-media">
         <img src="${p.image}" alt="${loc(p.name)}" loading="lazy" width="600" height="800">
         ${p.badge ? `<span class="product-badge">${loc(p.badge)}</span>` : ""}
       </div>
       <div class="product-info">
         <h3>${loc(p.name)}</h3>
-        <p class="product-color">${loc(p.color)}</p>
+        <p class="product-color">${p.brand} · ${loc(p.color)}</p>
         <div class="product-footer">
           <span class="product-price">${formatPrice(p.price)}</span>
           <span class="product-view">${t("product.view")}</span>
@@ -285,6 +363,7 @@ function openProduct(id, keepOpen = false) {
   const name = loc(p.name);
   $("#modalImage").src = p.image;
   $("#modalImage").alt = name;
+  $("#modalBrand").textContent = p.brand;
   $("#modalTitle").textContent = name;
   $("#modalDesc").textContent = loc(p.description);
   $("#modalPrice").textContent = formatPrice(p.price);
@@ -397,7 +476,7 @@ function closeCart() {
 
 function initHeader() {
   const header = $("#header");
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 16);
+  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 40);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -421,16 +500,79 @@ function initHeader() {
   });
 }
 
-function initHeroSlides() {
-  const slides = $$(".hero-slide");
-  if (slides.length < 2) return;
-  let i = 0;
-  setInterval(() => {
-    slides[i].classList.remove("is-active");
-    i = (i + 1) % slides.length;
-    void slides[i].offsetWidth;
-    slides[i].classList.add("is-active");
-  }, 7000);
+function initHeroVideo() {
+  const video = $("#heroVideo");
+  if (!video) return;
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  };
+  tryPlay();
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) tryPlay();
+  });
+}
+
+function initBrandFilter() {
+  $$(".brand-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const brand = chip.dataset.brand;
+      const same = activeBrand === brand;
+      activeBrand = same ? null : brand;
+      $$(".brand-chip").forEach((c) => c.classList.toggle("is-active", c.dataset.brand === activeBrand));
+      renderProducts();
+      $("#collection")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function initReveal() {
+  const editorial = $(".editorial");
+  if (!editorial) return;
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-in");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  io.observe(editorial);
+}
+
+function initCursorGlow() {
+  const glow = $("#cursorGlow");
+  if (!glow || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  let x = 0;
+  let y = 0;
+  let tx = 0;
+  let ty = 0;
+  let raf = 0;
+
+  const tick = () => {
+    x += (tx - x) * 0.12;
+    y += (ty - y) * 0.12;
+    glow.style.left = `${x}px`;
+    glow.style.top = `${y}px`;
+    raf = requestAnimationFrame(tick);
+  };
+
+  window.addEventListener(
+    "pointermove",
+    (e) => {
+      tx = e.clientX;
+      ty = e.clientY;
+      glow.classList.add("is-on");
+      if (!raf) raf = requestAnimationFrame(tick);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("pointerleave", () => glow.classList.remove("is-on"));
 }
 
 function init() {
@@ -439,7 +581,10 @@ function init() {
 
   applyI18n();
   initHeader();
-  initHeroSlides();
+  initHeroVideo();
+  initBrandFilter();
+  initReveal();
+  initCursorGlow();
 
   $("#cartBtn")?.addEventListener("click", openCart);
   $("#addToCartBtn")?.addEventListener("click", addToCart);
