@@ -1,103 +1,92 @@
-const IG_URL = "https://www.instagram.com/multibrand.al/";
-const CART_KEY = "mb_cart_v1";
-const LANG_KEY = "mb_lang";
+const IG_URL = "https://www.instagram.com/divinecollectionn/";
+const CART_KEY = "dc_cart_v1";
+const LANG_KEY = "dc_lang";
 
 const products = [
   {
     id: 1,
-    brand: "Camilla",
-    name: { sq: "Trench lëkure", en: "Leather Trench Coat" },
-    color: { sq: "Kafe e errët", en: "Dark brown" },
-    price: 28900,
-    badge: { sq: "Editorial", en: "Editorial" },
-    image: "images/product-leather-trench.png",
+    tags: ["mini", "corset"],
+    category: "mini",
+    name: { sq: "Fustan korset me dantellë", en: "Lace Corset Mini Dress" },
+    color: { sq: "I zi", en: "Black" },
+    badge: { sq: "I ri", en: "New" },
+    images: [
+      "images/Screenshot 2026-09-27 161221.png",
+      "images/Screenshot 2026-09-27 161203.png"
+    ],
     description: {
-      sq: "Trench i gjatë lëkure me bel, mëngë të gjera dhe siluetë dramatike — look editorial për ditë dhe darkë.",
-      en: "Floor-length leather trench with belt, wide sleeves, and a dramatic silhouette — editorial day-to-night."
+      sq: "Mini me mëngë dantelle, dekolte të çelur dhe korset të strukturuar. Siluetë e ngushtë për darka dhe dalje.",
+      en: "Mini dress with lace sleeves, an open neckline, and a structured corset waist. A close fit for nights out."
     },
     sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 2,
-    brand: "Percival",
-    name: { sq: "Look elevator", en: "Elevator Look" },
-    color: { sq: "E bardhë / gri", en: "White / grey" },
-    price: 14500,
-    badge: { sq: "K11", en: "K11" },
-    image: "images/product-mens-look.png",
+    tags: ["mini"],
+    category: "mini",
+    name: { sq: "Fustan mini me thellim V", en: "Plunge V Mini Dress" },
+    color: { sq: "I zi", en: "Black" },
+    badge: { sq: "Editorial", en: "Editorial" },
+    images: ["images/Screenshot 2026-09-27 161228.png"],
     description: {
-      sq: "Këmishë me vijëza, pantallona të gjera dhe kapelë — stil modern meshkujsh me ndjenjë luksore.",
-      en: "Pinstripe shirt, wide-leg trousers, and cap — modern menswear with a luxury edge."
+      sq: "Fustan i zi me mëngë të gjata, thellim V dhe fund të shkurtër të hapur. I pastër, i lehtë dhe gati për udhëtim.",
+      en: "Black long-sleeve mini with a deep V and a flared hem. Clean, light, and ready for travel."
     },
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 3,
-    brand: "Percival",
-    name: { sq: "Tee Percival", en: "Percival Logo Tee" },
-    color: { sq: "E bardhë", en: "White" },
-    price: 6900,
-    badge: { sq: "Essential", en: "Essential" },
-    image: "images/product-percival-tee.png",
+    tags: ["evening"],
+    category: "evening",
+    name: { sq: "Fustan maxi me choker", en: "Choker Cutout Gown" },
+    color: { sq: "I zi", en: "Black" },
+    badge: { sq: "Mbrëmje", en: "Evening" },
+    images: ["images/Screenshot 2026-09-27 161237.png"],
     description: {
-      sq: "T-shirt e bardhë me logo Percival — bazike premium për çdo ditë.",
-      en: "Crisp white tee with Percival branding — a premium everyday essential."
+      sq: "Fustan i gjatë me jakë choker, prerje në gjoks, bel të strukturuar dhe të çarë të lartë. Për dasma dhe mbrëmje.",
+      en: "Floor-length gown with a choker neckline, chest cutout, structured waist, and high slit. For weddings and evenings."
     },
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 4,
-    brand: "Bardot",
-    name: { sq: "Fustan midi lëkure", en: "Leather Midi Dress" },
-    color: { sq: "I zi", en: "Black" },
-    price: 19800,
+    tags: ["evening"],
+    category: "evening",
+    name: { sq: "Fustan maxi çokollatë", en: "Cocoa Choker Gown" },
+    color: { sq: "Çokollatë", en: "Cocoa" },
     badge: { sq: "I ri", en: "New" },
-    image: "images/product-leather-dress.png",
+    images: ["images/Screenshot 2026-09-27 161249.png"],
     description: {
-      sq: "Fustan midi strapless në lëkurë të zezë me detaj metalik në gjoks — siluetë e fortë dhe moderne.",
-      en: "Strapless black leather midi with a metallic chest bar — sharp, modern silhouette."
+      sq: "I njëjti prerje dramatike në ngjyrë çokollatë: jakë e mbështjellë, bel i theksuar dhe fund i gjatë me të çarë.",
+      en: "The same dramatic cut in cocoa: draped neckline, defined waist, and a flowing skirt with a high slit."
     },
     sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 5,
-    brand: "Maria Lucia Hohan",
-    name: { sq: "Naima Dress", en: "Naima Dress" },
-    color: { sq: "Rose gold", en: "Rose gold" },
-    price: 42000,
-    badge: { sq: "Evening", en: "Evening" },
-    image: "images/product-naima-dress.png",
+    tags: ["evening", "corset"],
+    category: "evening",
+    name: { sq: "Fustan korset i bardhë", en: "White Corset Gown" },
+    color: { sq: "I bardhë", en: "White" },
+    badge: { sq: "Statement", en: "Statement" },
+    images: ["images/Screenshot 2026-09-27 161328.png"],
     description: {
-      sq: "Fustan mbrëmjeje me pleats metalike — Opera Night. Për dasma dhe darka që meritojnë shkëlqim.",
-      en: "Metallic pleated evening gown — Opera Night. Made for weddings and nights that sparkle."
+      sq: "Fustan sirenë me jakë halter, korset të tejdukshëm dhe bel të mbledhur. E bardha që mban vëmendjen.",
+      en: "Mermaid gown with a halter neck, sheer corset panel, and ruched waist. White that holds the room."
     },
     sizes: ["XS", "S", "M", "L"]
   },
   {
     id: 6,
-    brand: "Almada",
-    name: { sq: "Gown me sequins", en: "Sequin Halter Gown" },
-    color: { sq: "Bronz", en: "Bronze" },
-    price: 26500,
-    badge: { sq: "Sale", en: "Sale" },
-    image: "images/product-sequin-gown.png",
+    tags: ["mini"],
+    category: "mini",
+    name: { sq: "Fustan kadife me dantellë", en: "Velvet Lace Mini" },
+    color: { sq: "I zi", en: "Black" },
+    badge: { sq: "I ri", en: "New" },
+    images: ["images/Screenshot 2026-09-27 161338.png"],
     description: {
-      sq: "Fustan i gjatë saten me sequins dhe të çarë — prani maksimale për mbrëmje.",
-      en: "Satin floor-length gown with sequin detail and high slit — maximum evening presence."
-    },
-    sizes: ["XS", "S", "M", "L"]
-  },
-  {
-    id: 7,
-    brand: "Camilla",
-    name: { sq: "Trench krokodil", en: "Croc Trench Coat" },
-    color: { sq: "Mustard", en: "Mustard" },
-    price: 35500,
-    badge: { sq: "Statement", en: "Statement" },
-    image: "images/product-croc-trench.png",
-    description: {
-      sq: "Trench me teksturë krokodil dhe çantë matching — statement piece që bie në sy menjëherë.",
-      en: "Crocodile-texture trench with matching bag — a statement piece that owns the room."
+      sq: "Kadife e zezë me thellim në gjoks, mëngë me dantellë dhe fund të shkurtër me shtresa. Mini për mbrëmje.",
+      en: "Black velvet with a deep neckline, lace cuffs, and a tiered lace skirt. An evening mini."
     },
     sizes: ["XS", "S", "M", "L"]
   }
@@ -105,100 +94,116 @@ const products = [
 
 const i18n = {
   sq: {
+    "meta.desc": "Divine Collection — elegancë e përzgjedhur për femra. Vetëm online. Porosi në DM. Dërgesa në Kosovë, Shqipëri dhe Maqedoni të Veriut. Shumicë dhe pakicë.",
     "nav.collection": "Koleksioni",
-    "nav.brands": "Brendet",
+    "nav.categories": "Kategoritë",
     "nav.story": "Rreth nesh",
     "nav.visit": "Kontakt",
-    "hero.tagline": "Destinacioni i luksit të kuruar",
-    "hero.sub": "Një seleksion ekskluziv i brendeve më të mira globale.",
+    "hero.tagline": "Elegancë e përzgjedhur për femra",
+    "hero.sub": "Vetëm online · Kosovë, Shqipëri dhe Maqedoni e Veriut",
     "hero.ctaShop": "Shiko koleksionin",
     "hero.ctaIg": "Ndiq në Instagram",
-    "brands.label": "Brendet",
-    "brands.title": "Edit global",
-    "brands.desc": "Emra që përkufizojnë stilin — të zgjedhur me kujdes për Multibrand.",
+    "cat.all": "Të gjitha",
+    "cat.mini": "Mini",
+    "cat.evening": "Mbrëmje",
+    "cat.corset": "Korset",
+    "categories.label": "Kategoritë",
+    "categories.title": "Zgjidh siluetën",
+    "categories.desc": "Mini, fustane mbrëmjeje dhe korset — të zgjedhura për Divine Collection.",
     "collection.label": "Koleksioni",
     "collection.title": "Pjesë të zgjedhura",
-    "collection.desc": "Looks, coats dhe evening pieces — porosit online ose na shkruaj në Instagram.",
+    "collection.desc": "Porosit në DM për madhësinë, shumicën ose pakicën.",
     "editorial.label": "Editorial",
-    "editorial.title": "Formë.<br>Teksturë.<br>Prani.",
-    "editorial.body": "Silueta që mbajnë hapësirën — për darka, udhëtime dhe çdo moment që meriton më shumë.",
+    "editorial.title": "Elegancë.<br>Prani.<br>Divine.",
+    "editorial.body": "Fustane që mbajnë hapësirën — për dasma, darka dhe çdo moment që do më shumë.",
     "editorial.cta": "Eksploro",
     "story.label": "Rreth nesh",
-    "story.body": "Destinacioni për luks të kuruar. Një edit ekskluziv i brendeve më të mira globale — kuruar me sy të mprehtë për stil modern.",
-    "story.p1": "Brende globale të kuruara",
-    "story.p2": "Transport në Shqipëri",
-    "story.p3": "Sale deri në 50%",
-    "story.p4": "Porosi përmes Instagram DM",
+    "story.body": "Divine Collection është elegancë e përzgjedhur për femra. Vetëm online — porosit në DM, për vete ose për shumicë.",
+    "story.p1": "Elegancë e përzgjedhur për femra",
+    "story.p2": "Vetëm online",
+    "story.p3": "Dërgesa: Kosovë, Shqipëri, Maqedoni e Veriut",
+    "story.p4": "Shumicë dhe pakicë",
+    "story.p5": "Porosi përmes Instagram DM",
     "visit.label": "Kontakt & porosi",
-    "visit.title": "Le të flasim stil",
-    "visit.desc": "Shkruaj për madhësinë, disponueshmërinë dhe porosinë tënde — ose na ndiq për drops të reja.",
-    "visit.online": "Online",
-    "visit.contact": "Kontakt",
+    "visit.title": "Porosit në DM",
+    "visit.desc": "Na shkruaj për madhësinë, disponueshmërinë, shumicën ose pakicën.",
+    "visit.online": "Vetëm online",
+    "visit.ship": "Dërgesa",
+    "visit.shipPlaces": "Kosovë · Shqipëri · Maqedoni e Veriut",
     "visit.igLink": "Hap Instagram",
     "visit.dm": "Dërgo DM",
-    "visit.ig": "Mesazh @multibrand.al",
+    "visit.ig": "Mesazh @divinecollectionn",
     "visit.shop": "Shiko pjesët",
-    "footer.tag": "Luks i kuruar",
+    "footer.tag": "Elegancë e përzgjedhur",
+    "price.dm": "Çmimi në DM",
     "modal.add": "Shto në çantë",
     "modal.ig": "Porosit në Instagram",
     "cart.title": "Çanta jote",
-    "cart.total": "Totali",
+    "cart.total": "Pjesë",
     "cart.checkout": "Porosit në Instagram",
-    "cart.hint": "Dërgo detajet e çantës në DM — madhësia dhe pagesa rregullohen privatisht.",
+    "cart.hint": "Dërgo pjesët në DM — madhësia, çmimi dhe pagesa rregullohen privatisht. Shumicë dhe pakicë.",
     "cart.empty": "Çanta është bosh.",
     "cart.size": "Madhësia",
     "cart.aria": "Çanta",
     "toast.added": "U shtua në çantë",
     "product.view": "Shiko",
-    "marquee": ["Silk Laundry", "Camilla", "Almada", "Percival", "Bardot", "Curated Luxury", "Up to 50% Off"]
+    "marquee": ["Elegancë", "Vetëm online", "Kosovë", "Shqipëri", "Maqedoni e Veriut", "Shumicë & pakicë", "Porosit në DM"]
   },
   en: {
+    "meta.desc": "Divine Collection — selected elegance for women. Online only. Order via DM. Shipping to Kosovo, Albania and North Macedonia. Wholesale and retail.",
     "nav.collection": "Collection",
-    "nav.brands": "Brands",
+    "nav.categories": "Categories",
     "nav.story": "About",
     "nav.visit": "Contact",
-    "hero.tagline": "The destination for curated luxury",
-    "hero.sub": "An exclusive edit of the best global fashion brands.",
-    "hero.ctaShop": "Shop the edit",
+    "hero.tagline": "Selected elegance for women",
+    "hero.sub": "Online only · Kosovo, Albania and North Macedonia",
+    "hero.ctaShop": "Shop the collection",
     "hero.ctaIg": "Follow on Instagram",
-    "brands.label": "Brands",
-    "brands.title": "Global edit",
-    "brands.desc": "Names that define style — carefully selected for Multibrand.",
+    "cat.all": "All",
+    "cat.mini": "Mini",
+    "cat.evening": "Evening",
+    "cat.corset": "Corset",
+    "categories.label": "Categories",
+    "categories.title": "Choose a silhouette",
+    "categories.desc": "Minis, evening gowns, and corsets — selected for Divine Collection.",
     "collection.label": "Collection",
     "collection.title": "Selected pieces",
-    "collection.desc": "Looks, coats, and evening pieces — order online or message us on Instagram.",
+    "collection.desc": "Order via DM for size, wholesale, or retail.",
     "editorial.label": "Editorial",
-    "editorial.title": "Form.<br>Texture.<br>Presence.",
-    "editorial.body": "Silhouettes that hold the room — for nights out, travel, and moments that deserve more.",
+    "editorial.title": "Elegance.<br>Presence.<br>Divine.",
+    "editorial.body": "Dresses that hold the room — for weddings, nights out, and moments that ask for more.",
     "editorial.cta": "Explore",
     "story.label": "About",
-    "story.body": "The destination for curated luxury. An exclusive edit of the best global fashion brands — chosen with a sharp eye for modern style.",
-    "story.p1": "Curated global brands",
-    "story.p2": "Shipping across Albania",
-    "story.p3": "Sale up to 50%",
-    "story.p4": "Order via Instagram DM",
+    "story.body": "Divine Collection is selected elegance for women. Online only — order by DM, for yourself or wholesale.",
+    "story.p1": "Selected elegance for women",
+    "story.p2": "Online only",
+    "story.p3": "Shipping: Kosovo, Albania, North Macedonia",
+    "story.p4": "Wholesale and retail",
+    "story.p5": "Order via Instagram DM",
     "visit.label": "Contact & order",
-    "visit.title": "Let's talk style",
-    "visit.desc": "Message us for size, availability, and your order — or follow for new drops.",
-    "visit.online": "Online",
-    "visit.contact": "Contact",
+    "visit.title": "Order via DM",
+    "visit.desc": "Message us for size, availability, wholesale, or retail.",
+    "visit.online": "Online only",
+    "visit.ship": "Shipping",
+    "visit.shipPlaces": "Kosovo · Albania · North Macedonia",
     "visit.igLink": "Open Instagram",
     "visit.dm": "Send DM",
-    "visit.ig": "Message @multibrand.al",
+    "visit.ig": "Message @divinecollectionn",
     "visit.shop": "Browse pieces",
-    "footer.tag": "Curated luxury fashion",
+    "footer.tag": "Selected elegance",
+    "price.dm": "Price via DM",
     "modal.add": "Add to bag",
     "modal.ig": "Order on Instagram",
     "cart.title": "Your bag",
-    "cart.total": "Total",
+    "cart.total": "Pieces",
     "cart.checkout": "Order via Instagram",
-    "cart.hint": "Send your bag details in DM — size & payment arranged privately.",
+    "cart.hint": "Send the pieces in DM — size, price, and payment are arranged privately. Wholesale and retail.",
     "cart.empty": "Your bag is empty.",
     "cart.size": "Size",
     "cart.aria": "Bag",
     "toast.added": "Added to bag",
     "product.view": "View",
-    "marquee": ["Silk Laundry", "Camilla", "Almada", "Percival", "Bardot", "Curated Luxury", "Up to 50% Off"]
+    "marquee": ["Elegance", "Online only", "Kosovo", "Albania", "North Macedonia", "Wholesale & retail", "Order via DM"]
   }
 };
 
@@ -208,10 +213,11 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 let lang = localStorage.getItem(LANG_KEY) || "sq";
 let activeProduct = null;
 let selectedSize = "M";
-let activeBrand = null;
+let activeCategory = "";
 
 function t(key) {
-  return i18n[lang][key] ?? i18n.en[key] ?? key;
+  const value = i18n[lang][key] ?? i18n.en[key] ?? key;
+  return value;
 }
 
 function loc(obj) {
@@ -219,8 +225,8 @@ function loc(obj) {
   return obj[lang] || obj.en || obj.sq || "";
 }
 
-function formatPrice(n) {
-  return new Intl.NumberFormat(lang === "sq" ? "sq-AL" : "en-US").format(n) + " LEK";
+function categoryLabel(key) {
+  return t(`cat.${key}`);
 }
 
 function getCart() {
@@ -240,10 +246,6 @@ function cartCount(items = getCart()) {
   return items.reduce((sum, i) => sum + i.qty, 0);
 }
 
-function cartTotal(items = getCart()) {
-  return items.reduce((sum, i) => sum + i.price * i.qty, 0);
-}
-
 function showToast(msg) {
   const el = $("#toast");
   if (!el) return;
@@ -259,8 +261,8 @@ function applyI18n() {
   $$("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = t(key);
-    if (value.includes("<br>")) el.innerHTML = value;
-    else el.textContent = value;
+    if (typeof value === "string" && value.includes("<br>")) el.innerHTML = value;
+    else if (typeof value === "string") el.textContent = value;
   });
 
   $$("[data-i18n-aria]").forEach((el) => {
@@ -287,8 +289,11 @@ function applyI18n() {
 
   document.title =
     lang === "sq"
-      ? "Multibrand — Luks i kuruar · Shqipëri"
-      : "Multibrand — Curated Luxury Fashion · Albania";
+      ? "Divine Collection — Elegancë e përzgjedhur"
+      : "Divine Collection — Selected Elegance";
+
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute("content", t("meta.desc"));
 
   renderProducts();
   updateCartUI();
@@ -302,8 +307,8 @@ function setLang(next) {
 }
 
 function filteredProducts() {
-  if (!activeBrand) return products;
-  return products.filter((p) => p.brand === activeBrand);
+  if (!activeCategory) return products;
+  return products.filter((p) => p.tags.includes(activeCategory));
 }
 
 function renderProducts() {
@@ -317,14 +322,14 @@ function renderProducts() {
       (p, i) => `
     <article class="product-card" data-id="${p.id}" style="transition-delay:${i * 60}ms">
       <div class="product-media">
-        <img src="${p.image}" alt="${loc(p.name)}" loading="lazy" width="600" height="800">
+        <img src="${p.images[0]}" alt="${loc(p.name)}" loading="lazy" width="600" height="800">
         ${p.badge ? `<span class="product-badge">${loc(p.badge)}</span>` : ""}
       </div>
       <div class="product-info">
         <h3>${loc(p.name)}</h3>
-        <p class="product-color">${p.brand} · ${loc(p.color)}</p>
+        <p class="product-color">${categoryLabel(p.category)} · ${loc(p.color)}</p>
         <div class="product-footer">
-          <span class="product-price">${formatPrice(p.price)}</span>
+          <span class="product-price">${t("price.dm")}</span>
           <span class="product-view">${t("product.view")}</span>
         </div>
       </div>
@@ -352,6 +357,12 @@ function renderProducts() {
   $$(".product-card", grid).forEach((c) => io.observe(c));
 }
 
+function setModalImage(src, alt) {
+  const img = $("#modalImage");
+  img.src = src;
+  img.alt = alt;
+}
+
 function openProduct(id, keepOpen = false) {
   const p = products.find((x) => x.id === id);
   if (!p) return;
@@ -361,12 +372,32 @@ function openProduct(id, keepOpen = false) {
   }
 
   const name = loc(p.name);
-  $("#modalImage").src = p.image;
-  $("#modalImage").alt = name;
-  $("#modalBrand").textContent = p.brand;
+  setModalImage(p.images[0], name);
+  $("#modalBrand").textContent = "Divine Collection";
   $("#modalTitle").textContent = name;
   $("#modalDesc").textContent = loc(p.description);
-  $("#modalPrice").textContent = formatPrice(p.price);
+  $("#modalPrice").textContent = t("price.dm");
+
+  const thumbs = $("#modalThumbs");
+  if (p.images.length > 1) {
+    thumbs.hidden = false;
+    thumbs.innerHTML = p.images
+      .map(
+        (src, i) =>
+          `<button type="button" class="modal-thumb${i === 0 ? " is-active" : ""}" data-src="${src}" aria-label="${name}"><img src="${src}" alt=""></button>`
+      )
+      .join("");
+    $$(".modal-thumb", thumbs).forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setModalImage(btn.dataset.src, name);
+        $$(".modal-thumb", thumbs).forEach((b) => b.classList.toggle("is-active", b === btn));
+      });
+    });
+  } else {
+    thumbs.hidden = true;
+    thumbs.innerHTML = "";
+  }
 
   const sizeRow = $("#sizeRow");
   sizeRow.innerHTML = p.sizes
@@ -409,8 +440,7 @@ function addToCart() {
       id: activeProduct.id,
       name: activeProduct.name,
       size: selectedSize,
-      price: activeProduct.price,
-      image: activeProduct.image,
+      image: activeProduct.images[0],
       qty: 1
     });
   }
@@ -445,7 +475,7 @@ function updateCartUI() {
       <img src="${item.image}" alt="">
       <div>
         <h4>${loc(item.name)}</h4>
-        <p>${t("cart.size")} ${item.size} · ${item.qty}× ${formatPrice(item.price)}</p>
+        <p>${t("cart.size")} ${item.size} · ${item.qty}×</p>
       </div>
       <button type="button" class="cart-item-remove" data-remove="${item.key}" aria-label="Remove">&times;</button>
     </div>
@@ -453,7 +483,7 @@ function updateCartUI() {
     )
     .join("");
 
-  $("#cartTotal").textContent = formatPrice(cartTotal(items));
+  $("#cartTotal").textContent = String(count);
   $("#checkoutIg").href = IG_URL;
 
   $$("[data-remove]", container).forEach((btn) => {
@@ -500,30 +530,30 @@ function initHeader() {
   });
 }
 
-function initHeroVideo() {
-  const video = $("#heroVideo");
-  if (!video) return;
-  const tryPlay = () => {
-    const p = video.play();
-    if (p && typeof p.catch === "function") p.catch(() => {});
-  };
-  tryPlay();
-  document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) tryPlay();
-  });
-}
-
-function initBrandFilter() {
+function initCategoryFilter() {
   $$(".brand-chip").forEach((chip) => {
     chip.addEventListener("click", () => {
-      const brand = chip.dataset.brand;
-      const same = activeBrand === brand;
-      activeBrand = same ? null : brand;
-      $$(".brand-chip").forEach((c) => c.classList.toggle("is-active", c.dataset.brand === activeBrand));
+      activeCategory = chip.dataset.cat || "";
+      $$(".brand-chip").forEach((c) =>
+        c.classList.toggle("is-active", (c.dataset.cat || "") === activeCategory)
+      );
       renderProducts();
       $("#collection")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+}
+
+function initHeroSlides() {
+  const slides = $$(".hero-image");
+  if (slides.length < 2) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let index = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+  setInterval(() => {
+    slides[index].classList.remove("is-active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("is-active");
+  }, 5600);
 }
 
 function initReveal() {
@@ -581,8 +611,8 @@ function init() {
 
   applyI18n();
   initHeader();
-  initHeroVideo();
-  initBrandFilter();
+  initHeroSlides();
+  initCategoryFilter();
   initReveal();
   initCursorGlow();
 

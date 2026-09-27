@@ -1,17 +1,17 @@
-/* Multibrand — white modern curated luxury */
+/* Divine Collection — blush, gold, selected elegance */
 
 :root {
-  --bg: #f7f6f4;
+  --bg: #f8f3ef;
   --bg-pure: #ffffff;
-  --bg-soft: #eeece8;
-  --ink: #121212;
-  --muted: #6f6a64;
-  --line: rgba(18, 18, 18, 0.08);
-  --line-strong: rgba(18, 18, 18, 0.16);
-  --accent: #1a1a1a;
-  --accent-warm: #c45c3a;
-  --ring: linear-gradient(135deg, #7b5cff, #ff4d8d, #ff8a3d);
-  --font-display: "Syne", system-ui, sans-serif;
+  --bg-soft: #f3e8e0;
+  --ink: #2c211c;
+  --muted: #8a7568;
+  --line: rgba(44, 33, 28, 0.08);
+  --line-strong: rgba(44, 33, 28, 0.16);
+  --accent: #2c211c;
+  --accent-warm: #a67c52;
+  --ring: linear-gradient(135deg, #c44dff, #f0c56a, #e07a3a);
+  --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Outfit", system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 68px;
@@ -26,8 +26,8 @@ body {
   font-family: var(--font-sans);
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(255, 77, 141, 0.06), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(123, 92, 255, 0.05), transparent 50%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(196, 77, 255, 0.06), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(224, 122, 58, 0.06), transparent 50%),
     var(--bg);
   line-height: 1.55;
   font-weight: 400;
@@ -57,7 +57,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   border-radius: 50%;
   pointer-events: none;
   z-index: 50;
-  background: radial-gradient(circle, rgba(196, 92, 58, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(166, 124, 82, 0.16), transparent 70%);
   transform: translate(-50%, -50%);
   transition: opacity 0.3s var(--ease);
   opacity: 0;
@@ -90,7 +90,6 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .site-header.is-scrolled .brand-logo {
   filter: none;
-  mix-blend-mode: multiply;
 }
 
 .header-inner {
@@ -112,21 +111,21 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   height: 42px;
   object-fit: cover;
   border-radius: 50%;
-  filter: brightness(0) invert(1);
-  transition: filter 0.35s var(--ease);
+  background: #f6ebe3;
 }
 
 .brand-text {
   font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  display: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
-@media (min-width: 420px) {
-  .brand-text { display: inline; }
+@media (max-width: 520px) {
+  .brand-text { font-size: 1.15rem; }
+  .header-actions .icon-btn { display: none; }
+  .hero-sub { font-size: 0.88rem; max-width: 28ch; }
 }
 
 .lang-switch {
@@ -350,13 +349,25 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .hero-media { position: absolute; inset: 0; }
 
-.hero-video {
+.hero-video,
+.hero-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 22%;
+  opacity: 0;
   transform: scale(1.02);
   animation: heroDrift 18s ease-in-out infinite alternate;
+  transition: opacity 1.6s ease;
 }
+
+.hero-image.is-active { opacity: 1; }
+
+.hero-image:nth-child(1) { object-position: center 28%; }
+.hero-image:nth-child(2) { object-position: center 18%; }
+.hero-image:nth-child(5) { object-position: center 12%; }
 
 @keyframes heroDrift {
   from { transform: scale(1.02) translate3d(0, 0, 0); }
@@ -387,14 +398,11 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 }
 
 .hero-logo {
-  width: clamp(88px, 22vw, 128px);
-  height: clamp(88px, 22vw, 128px);
+  width: clamp(96px, 22vw, 132px);
+  height: clamp(96px, 22vw, 132px);
   margin: 0 auto 18px;
   border-radius: 50%;
   object-fit: cover;
-  filter: brightness(0) invert(1);
-  padding: 2px;
-  background: var(--ring);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   animation: logoPulse 5s ease-in-out infinite;
 }
@@ -406,12 +414,20 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .hero-brand {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 10vw, 5.2rem);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 0.95;
+  font-size: clamp(3.4rem, 12vw, 6.4rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
   margin-bottom: 14px;
+}
+
+.hero-brand span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.34em;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
 }
 
 .hero-tagline {
@@ -521,10 +537,10 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
   margin-bottom: 12px;
 }
 
@@ -631,6 +647,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
   transition: transform 1s var(--ease);
 }
 
@@ -656,9 +673,10 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .product-info h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 650;
-  letter-spacing: -0.01em;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
   margin-bottom: 4px;
 }
 
@@ -712,7 +730,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 18%;
   transform: scale(1.04);
   transition: transform 8s var(--ease);
 }
@@ -808,6 +826,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 .story-img {
   position: absolute;
   object-fit: cover;
+  object-position: center 12%;
   background: var(--bg-soft);
   transition: transform 0.7s var(--ease);
 }
@@ -842,7 +861,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   padding: 80px 0 calc(80px + var(--safe-b));
   text-align: center;
   background:
-    linear-gradient(180deg, transparent, rgba(196, 92, 58, 0.04));
+    linear-gradient(180deg, transparent, rgba(166, 124, 82, 0.08));
 }
 
 .visit .section-desc { margin-bottom: 36px; }
@@ -930,11 +949,10 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 }
 
 .footer-logo {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
-  mix-blend-mode: multiply;
 }
 
 .footer-inner a {
@@ -1005,8 +1023,34 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 }
 
 .modal-media {
+  position: relative;
   background: var(--bg-soft);
   min-height: 280px;
+}
+
+.modal-thumbs {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.modal-thumbs[hidden] { display: none; }
+
+.modal-thumb {
+  width: 52px;
+  height: 68px;
+  padding: 0;
+  border: 2px solid transparent;
+  overflow: hidden;
+  opacity: 0.72;
+}
+
+.modal-thumb.is-active {
+  border-color: #fff;
+  opacity: 1;
 }
 
 .modal-media img {
@@ -1014,6 +1058,13 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   height: 100%;
   object-fit: cover;
   max-height: 52vh;
+}
+
+.modal-thumb img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
 }
 
 @media (min-width: 760px) {
@@ -1037,10 +1088,11 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .modal-body h3 {
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   padding-right: 36px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
 }
 
 .modal-desc { color: var(--muted); font-size: 0.92rem; }
@@ -1218,5 +1270,6 @@ body.modal-open { overflow: hidden; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .hero-video { animation: none; }
+  .hero-video,
+  .hero-image { animation: none; }
 }
