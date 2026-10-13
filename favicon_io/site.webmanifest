@@ -1,14 +1,17 @@
 {
-  "name": "Divine Collection",
-  "short_name": "Divine",
+  "name": "Cozy & Chic",
+  "short_name": "Cozy & Chic",
   "icons": [
     {
-      "src": "../images/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "../images/logo.png",
+      "sizes": "1024x1042",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#f8f3ef",
-  "background_color": "#f8f3ef",
-  "display": "standalone"
+  "theme_color": "#fff5f8",
+  "background_color": "#fff5f8",
+  "display": "standalone",
+  "lang": "sq",
+  "start_url": "../index.html"
 }
